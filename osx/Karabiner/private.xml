@@ -20,6 +20,12 @@
 	        KeyCode::ESCAPE
 	    </autogen>
 
+        <autogen>
+	    	__KeyToKey__
+	    	KeyCode::ESCAPE,
+	    	KeyCode::CAPSLOCK,
+        </autogen>
+
 	    <autogen>
 	    	__KeyToKey__
 	    	KeyCode::H, {{MY_HYPER_KEY}},
