@@ -1,0 +1,42 @@
+[user]
+	name = kejie.wang
+	email = kejiewong@live.com
+[color]
+	ui = true
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe' \"$LOCAL\" \"$REMOTE\"
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/SourceGear/Common/DiffMerge/sgdm.exe' -merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustExitCode = true
+[alias]
+  # Show verbose output about tags, branches or remotes
+  st = status
+  co = checkout
+  br = branch
+  ci = commit
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+  # Pretty log output
+  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+	last = log -1 --stat
+	cp = cherry-pick
+	cl = clone
+	unstage = reset HEAD --
+	dc = diff --cached
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+[push]
+	default = matching
+[core]
+	trustctime = false
+	editor = vim
+	filemode = false
+[credential]
+	helper = cache --timeout=3600
+[merge]
+	tool = vimdiff
+[mergetool]
+	keeptemporaries = false
+	keepbackups = false
+	prompt = false
+	trustexitcode = false
