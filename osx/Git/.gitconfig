@@ -19,11 +19,22 @@
   co = checkout
   br = branch
   ci = commit
+  diff = diff --word-diff
+  dc = diff --cached
   tags = tag -l
+  rh = reset --hard
   branches = branch -a
   remotes = remote -v
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  deleted = log --diff-filter=D --summary
   # Pretty log output
   hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+  last = log -1 --stat
+  cp = cherry-pick
+  cl = clone
+  unstage = reset HEAD --
+  dc = diff --cached
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
 
 [color]
   # Use colors in Git commands that are capable of colored output when outputting to the terminal
