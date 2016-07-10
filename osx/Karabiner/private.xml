@@ -26,6 +26,12 @@
 	    	KeyCode::CAPSLOCK,
         </autogen>
 
+        <autogen>
+	    	__KeyToKey__
+	    	KeyCode::COMMAND_R,
+            KeyCode::CONTROL_L,
+        </autogen>
+
 	    <autogen>
 	    	__KeyToKey__
 	    	KeyCode::H, {{MY_HYPER_KEY}},
