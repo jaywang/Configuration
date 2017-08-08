@@ -33,6 +33,11 @@ filetype plugin indent on    " required
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompletMe Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTreed Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeDirArrows = 1
@@ -165,7 +170,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set nowrap "no Wrap lines
+set nowrap "Wrap lines
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -174,4 +179,3 @@ set nowrap "no Wrap lines
 set nobackup
 set nowb
 set noswapfile
-
