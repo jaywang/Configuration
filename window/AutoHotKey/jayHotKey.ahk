@@ -70,44 +70,55 @@ CapsLock & /:: Send, +{End}{Del}        ; / = Del all  after
 
 CapsLock & m:: Send, {BS}               ; m = Del char before; 
 CapsLock & n:: Send, ^{BS}              ; n = Del word before;      
-CapsLock & b:: Send, +{Home}{Del}       ; b = Del all  before; 
+CapsLock & b:: Send, +{Home}{Del}       ; b = Del all  before;
+RCtrl::LWin 
 
 ;;============================Special Char==========================||
-CapsLock & ':: Send, =                  ; ' = =
-CapsLock & `;:: Send, {Enter}           ; ; = Enter
-CapsLock & {:: Send, +9                 ; { = ( 
-CapsLock & }:: Send, +0;                ; } = )
-CapsLock & `:: Send, +``                ; Shift
-CapsLock & 4:: Send, +4
-CapsLock & 5:: Send, +5
-CapsLock & 6:: Send, +6
-CapsLock & 7:: Send, +7
-CapsLock & 8:: Send, +8
-CapsLock & 9:: Send, +9
-CapsLock & 0:: Send, +0
-CapsLock & -:: Send, +-
-CapsLock & =:: Send, +=
-CapsLock & \:: Send, +=
+;CapsLock & ':: Send, =                  ; ' = =
+;CapsLock & `;:: Send, {Enter}           ; ; = Enter
+;CapsLock & {:: Send, +9                 ; { = ( 
+;CapsLock & }:: Send, +0;                ; } = )
+;CapsLock & `:: Send, +``                ; Shift
+;CapsLock & 0:: Send, +0
+;CapsLock & 1:: Send, +1
+;CapsLock & 2:: Send, +2
+;CapsLock & 3:: Send, +3
+;CapsLock & 4:: Send, +4
+;CapsLock & 5:: Send, +5
+;CapsLock & 6:: Send, +6
+;CapsLock & 7:: Send, +7
+;CapsLock & 8:: Send, +8
+;CapsLock & 9:: Send, +9
+;CapsLock & -:: Send, +-
+;CapsLock & =:: Send, +=
+;CapsLock & \:: Send, +=
 
 ;;============================Editor================================||
 CapsLock & z:: Send, ^z                 ; Z = Cancel
 CapsLock & x:: Send, ^x                 ; X = Cut
 CapsLock & c:: Send, ^c                 ; C = Copy
 CapsLock & v:: Send, ^v                 ; V = Paste
-CapsLock & a:: Send, ^a                 ; A = Select All
 CapsLock & y:: Send, ^y                 ; Y = Redo
 
 ;;===========================Controller=============================||
 CapsLock & s:: Send, ^{Tab}             ; Switch Tag    S = {Ctr + Tab}
+CapsLock & a:: Send, +^{Tab}            ; Switch Tag    A = {Shift + Ctr + Tab}
 CapsLock & w:: Send, ^w                 ; Close Tag     W = {Ctr + W}
 CapsLock & q:: Send, !{F4}              ; Close Window  Q = {Alt + F4}
+CapsLock & d:: Send, {F12}              ; Dictionary  D = {Alt + D}
+CapsLock & UP:: Send, {Volume_Up}; 
+CapsLock & DOWN:: Send, {Volume_Down}; 
+CapsLock & LEFT:: Send, {Media_Play_Pause}; 
+CapsLock & RIGHT:: Send, {Media_Next}; 
+
+
 CapsLock::Send, {ESC}                   ; Vimer's love  Capslock = {ESC}
 
 ;;=========================Application==============================||
-CapsLock & d:: Send, !d                    ; Dictionary  D = {Alt + D}
-CapsLock & f:: Send, !f                    ; Everything  F = {Alt + F}
-CapsLock & g:: Send, !g                    ; Reversed     G = {Alt + G}
-CapsLock & e:: Run http://www.google.com/  ; Run Explore   E = {Explore}
+;CapsLock & d:: Send, !d                    ; Dictionary  D = {Alt + D}
+;CapsLock & f:: Send, !f                    ; Everything  F = {Alt + F}
+;CapsLock & g:: Send, !g                    ; Reversed     G = {Alt + G}
+;CapsLock & e:: Run http://www.google.com/  ; Run Explore   E = {Explore}
 
 ;;==================================================================;;
 ;;=========================CapsLock's Stuff=========================;;
