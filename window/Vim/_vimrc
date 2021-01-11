@@ -181,6 +181,9 @@ set ai "Auto indent
 set si "Smart indent
 set nowrap "Wrap lines
 
+" make the backspace work in insert mode
+set backspace=indent,eol,start
+
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12

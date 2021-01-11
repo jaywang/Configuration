@@ -1,0 +1,13 @@
+{
+	"color_scheme": "Packages/Solarized Color Scheme/Solarized (dark).sublime-color-scheme",
+	"font_size": 17,
+	"ignored_packages":
+	[
+	],
+	"vintage_start_in_command_mode": true,
+	"show_encoding": true,
+	"show_line_endings": true,
+	"tab_size": 4,
+	"theme": "Default.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
