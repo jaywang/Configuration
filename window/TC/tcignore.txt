@@ -1,0 +1,14 @@
+.git
+.svn
+.ssh
+$Recycle.BIN
+$WinREAgent
+C:\OneDriveTemp
+C:\ProgramData
+C:\Users\All Users
+C:\Users\Default
+C:\Users\Default User
+C:\Documents and Settings
+C:\Recovery
+C:\System Volume Information
+D:\System Volume Information
