@@ -12,7 +12,6 @@ call vundle#begin('$VIM/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Solarized'
 Plugin 'The-NERD-tree'
-"Plugin 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
