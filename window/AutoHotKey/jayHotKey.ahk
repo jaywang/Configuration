@@ -64,14 +64,9 @@ Send, +{Right}
 return
 
 ;;=============================Deletor==============================||
-CapsLock & ,:: Send, {Del}              ; , = Del char after
-CapsLock & .:: Send, ^{Del}             ; . = Del word after
-CapsLock & /:: Send, +{End}{Del}        ; / = Del all  after
-
-CapsLock & m:: Send, {BS}               ; m = Del char before; 
-CapsLock & n:: Send, ^{BS}              ; n = Del word before;      
-CapsLock & b:: Send, +{Home}{Del}       ; b = Del all  before;
-RCtrl::LWin 
+;CapsLock & ,:: Send, {Del}              ; , = Del char after
+;CapsLock & .:: Send, ^{Del}             ; . = Del word after
+;CapsLock & /:: Send, +{End}{Del}        ; / = Del all  after
 
 ;;============================Special Char==========================||
 ;CapsLock & ':: Send, =                  ; ' = =
@@ -101,16 +96,14 @@ CapsLock & v:: Send, ^v                 ; V = Paste
 CapsLock & y:: Send, ^y                 ; Y = Redo
 
 ;;===========================Controller=============================||
-CapsLock & s:: Send, ^{Tab}             ; Switch Tag    S = {Ctr + Tab}
-CapsLock & a:: Send, +^{Tab}            ; Switch Tag    A = {Shift + Ctr + Tab}
-CapsLock & w:: Send, ^w                 ; Close Tag     W = {Ctr + W}
+CapsLock & n:: Send, ^{Tab}             ; Switch Tag    N = {Ctr + Tab}
+CapsLock & m:: Send, +^{Tab}            ; Switch Tag    M = {Shift + Ctr + Tab}
 CapsLock & q:: Send, !{F4}              ; Close Window  Q = {Alt + F4}
-CapsLock & d:: Send, {F12}              ; Dictionary  D = {Alt + D}
+
 CapsLock & UP:: Send, {Volume_Up}; 
 CapsLock & DOWN:: Send, {Volume_Down}; 
 CapsLock & LEFT:: Send, {Media_Play_Pause}; 
 CapsLock & RIGHT:: Send, {Media_Next}; 
-
 
 CapsLock::Send, {ESC}                   ; Vimer's love  Capslock = {ESC}
 
@@ -119,6 +112,7 @@ CapsLock::Send, {ESC}                   ; Vimer's love  Capslock = {ESC}
 ;CapsLock & f:: Send, !f                    ; Everything  F = {Alt + F}
 ;CapsLock & g:: Send, !g                    ; Reversed     G = {Alt + G}
 ;CapsLock & e:: Run http://www.google.com/  ; Run Explore   E = {Explore}
+CapsLock & w:: Send, ^#w                    ; DisplyFusion Next Screen  W = {Alt + Win + W}
 
 ;;==================================================================;;
 ;;=========================CapsLock's Stuff=========================;;

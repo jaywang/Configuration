@@ -2,8 +2,8 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=$VIM/bundle/Vundle.vim/
-call vundle#begin('$VIM/bundle/')
+set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
+call vundle#begin('$HOME/vimfiles/bundle/')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin
@@ -13,6 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Solarized'
 Plugin 'The-NERD-tree'
 Plugin 'elzr/vim-json'
+Plugin 'mileszs/ack.vim'
+Plugin 'Yggdroot/LeaderF'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -26,26 +28,6 @@ filetype plugin indent on    " required
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
 " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => YouCompletMe Config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:ycm_global_ycm_extra_conf = '$VIM/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTreed Config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeDirArrows = 1
-"let g:NERDTreeDirArrowExpandable = '▸'
-"let g:NERDTreeDirArrowCollapsible = '▾'
-map <C-n> :NERDTreeToggle<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Json Format Config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-j> :%!python -m json.tool<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -189,7 +171,7 @@ if has("gui_running")
   elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
-    set guifont=Consolas:h15:cANSI
+    set guifont=Consolas:h20:cANSI
   endif
 endif
 
@@ -200,3 +182,49 @@ endif
 set nobackup
 set nowb
 set noswapfile
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTreed Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeDirArrows = 1
+"let g:NERDTreeDirArrowExpandable = '▸'
+"let g:NERDTreeDirArrowCollapsible = '▾'
+map <C-n> :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Json Format Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <C-j> :%!python -m json.tool<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Ack Vim Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => LeaderF Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:Lf_ShowRelativePath = 0
+let g:Lf_HideHelp = 1
+let g:Lf_PreviewResult = {'Function':0, 'Colorscheme':1}
+
+let g:Lf_NormalMap = {
+	\ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>']],
+	\ "Buffer": [["<ESC>", ':exec g:Lf_py "bufExplManager.quit()"<CR>']],
+	\ "Mru":    [["<ESC>", ':exec g:Lf_py "mruExplManager.quit()"<CR>']],
+	\ "Tag":    [["<ESC>", ':exec g:Lf_py "tagExplManager.quit()"<CR>']],
+	\ "Function":    [["<ESC>", ':exec g:Lf_py "functionExplManager.quit()"<CR>']],
+	\ "Colorscheme":    [["<ESC>", ':exec g:Lf_py "colorschemeExplManager.quit()"<CR>']],
+	\ }
+
+let g:Lf_ShortcutF = '<c-p>'
+let g:Lf_ShortcutB = '<c-l>'
+noremap <leader>f :LeaderfSelf<cr>
+noremap <leader>fm :LeaderfMru<cr>
+noremap <leader>ff :LeaderfFunction<cr>
+noremap <leader>fb :LeaderfBuffer<cr>
+noremap <leader>ft :LeaderfBufTag<cr>
+noremap <leader>fl :LeaderfLine<cr>
+noremap <leader>fw :LeaderfWindow<cr>
+noremap <leader>frr :LeaderfRgRecall<cr>
