@@ -1,37 +1,22 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$HOME/vimfiles/bundle/')
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Solarized'
-Plugin 'The-NERD-tree'
-Plugin 'elzr/vim-json'
-Plugin 'mileszs/ack.vim'
-Plugin 'Yggdroot/LeaderF'
+call plug#begin()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/nerdtree'
+Plug 'Yggdroot/LeaderF'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
 
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" be iMproved, required
+set nocompatible              
+
 " Sets how many lines of history VIM has to remember
 set history=700
 
@@ -46,10 +31,6 @@ set autoread
 " like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -175,6 +156,25 @@ if has("gui_running")
   endif
 endif
 
+noremap <silent><tab>m :tabnew<cr>
+noremap <silent><tab>e :tabclose<cr>
+noremap <silent><tab>n :tabn<cr>
+noremap <silent><tab>p :tabp<cr>
+noremap <silent><leader>t :tabnew<cr>
+noremap <silent><leader>g :tabclose<cr>
+noremap <silent><leader>1 :tabn 1<cr>
+noremap <silent><leader>2 :tabn 2<cr>
+noremap <silent><leader>3 :tabn 3<cr>
+noremap <silent><leader>4 :tabn 4<cr>
+noremap <silent><leader>5 :tabn 5<cr>
+noremap <silent><leader>6 :tabn 6<cr>
+noremap <silent><leader>7 :tabn 7<cr>
+noremap <silent><leader>8 :tabn 8<cr>
+noremap <silent><leader>9 :tabn 9<cr>
+noremap <silent><leader>0 :tabn 10<cr>
+noremap <silent><s-tab> :tabnext<CR>
+inoremap <silent><s-tab> <ESC>:tabnext<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -197,14 +197,12 @@ map <C-n> :NERDTreeToggle<CR>
 map <C-j> :%!python -m json.tool<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ack Vim Config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ackprg = 'ag --nogroup --nocolor --column'
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => LeaderF Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:Lf_WorkingDirectoryMode = 'AF'
+let g:Lf_RootMarkers = ['.git', '.svn', '.hg', '.project', '.root']
 
+let g:Lf_DefaultExternalTool='rg'
 let g:Lf_ShowRelativePath = 0
 let g:Lf_HideHelp = 1
 let g:Lf_PreviewResult = {'Function':0, 'Colorscheme':1}
@@ -228,3 +226,41 @@ noremap <leader>ft :LeaderfBufTag<cr>
 noremap <leader>fl :LeaderfLine<cr>
 noremap <leader>fw :LeaderfWindow<cr>
 noremap <leader>frr :LeaderfRgRecall<cr>
+
+" search word under cursor, the pattern is treated as regex, and enter normal mode directly
+noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gutentags Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let $GTAGSLABEL = 'native-pygments'
+let $GTAGSCONF = 'c:/Users/DELL/scoop/apps/global/6.6.8/share/gtags/gtags.conf'
+
+let g:gutentags_ctags_tagfile = '.tags'
+
+let g:gutentags_modules = []
+if executable('ctags')
+	let g:gutentags_modules += ['ctags']
+endif
+if executable('gtags-cscope') && executable('gtags')
+	let g:gutentags_modules += ['gtags_cscope']
+endif
+
+let g:gutentags_project_root = ['.root']
+let g:gutentags_cache_dir = expand('~/.cache/tags')
+
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+
+let g:gutentags_auto_add_gtags_cscope = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => gutentags_plus Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:gutentags_trace = 1
+"let g:gutentags_define_advanced_commands = 1
+" change focus to quickfix window after search (optional).
+let g:gutentags_plus_switch = 1
