@@ -5,9 +5,13 @@ call plug#begin()
 
 Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-unimpaired'
+Plug 'justinmk/vim-sneak'
 Plug 'Yggdroot/LeaderF'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
+Plug 'skywind3000/vim-preview'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -51,6 +55,16 @@ if has("multi_byte")
     endif 
 else 
     echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte" 
+endif
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 12
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h18:cANSI
+  endif
 endif
 
 set background=dark
@@ -120,8 +134,6 @@ set cursorcolumn
 " Add a bit extra margin to the left
 set foldcolumn=1
 
-
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -146,22 +158,11 @@ set nowrap "Wrap lines
 " make the backspace work in insert mode
 set backspace=indent,eol,start
 
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
-  elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
-  elseif has("gui_win32")
-    set guifont=Consolas:h20:cANSI
-  endif
-endif
-
+nnoremap <silent><tab>d :cd %:p:h<CR>:pwd<CR>
 noremap <silent><tab>m :tabnew<cr>
 noremap <silent><tab>e :tabclose<cr>
 noremap <silent><tab>n :tabn<cr>
 noremap <silent><tab>p :tabp<cr>
-noremap <silent><leader>t :tabnew<cr>
-noremap <silent><leader>g :tabclose<cr>
 noremap <silent><leader>1 :tabn 1<cr>
 noremap <silent><leader>2 :tabn 2<cr>
 noremap <silent><leader>3 :tabn 3<cr>
@@ -174,6 +175,7 @@ noremap <silent><leader>9 :tabn 9<cr>
 noremap <silent><leader>0 :tabn 10<cr>
 noremap <silent><s-tab> :tabnext<CR>
 inoremap <silent><s-tab> <ESC>:tabnext<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -189,12 +191,7 @@ set noswapfile
 let g:NERDTreeDirArrows = 1
 "let g:NERDTreeDirArrowExpandable = '▸'
 "let g:NERDTreeDirArrowCollapsible = '▾'
-map <C-n> :NERDTreeToggle<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Json Format Config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-j> :%!python -m json.tool<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => LeaderF Config
@@ -206,6 +203,7 @@ let g:Lf_DefaultExternalTool='rg'
 let g:Lf_ShowRelativePath = 0
 let g:Lf_HideHelp = 1
 let g:Lf_PreviewResult = {'Function':0, 'Colorscheme':1}
+let g:Lf_WindowHeight = 0.30
 
 let g:Lf_NormalMap = {
 	\ "File":   [["<ESC>", ':exec g:Lf_py "fileExplManager.quit()"<CR>']],
@@ -217,8 +215,7 @@ let g:Lf_NormalMap = {
 	\ }
 
 let g:Lf_ShortcutF = '<c-p>'
-let g:Lf_ShortcutB = '<c-l>'
-noremap <leader>f :LeaderfSelf<cr>
+noremap <leader>f :LeaderfFile<cr>
 noremap <leader>fm :LeaderfMru<cr>
 noremap <leader>ff :LeaderfFunction<cr>
 noremap <leader>fb :LeaderfBuffer<cr>
@@ -230,14 +227,13 @@ noremap <leader>frr :LeaderfRgRecall<cr>
 " search word under cursor, the pattern is treated as regex, and enter normal mode directly
 noremap <C-F> :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => gutentags Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 let $GTAGSLABEL = 'native-pygments'
 let $GTAGSCONF = 'c:/Users/DELL/scoop/apps/global/6.6.8/share/gtags/gtags.conf'
 
+let g:gutentags_add_default_project_roots = 0
 let g:gutentags_ctags_tagfile = '.tags'
 
 let g:gutentags_modules = []
@@ -255,6 +251,9 @@ let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
+" universal ctags
+let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
+
 let g:gutentags_auto_add_gtags_cscope = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -264,3 +263,18 @@ let g:gutentags_auto_add_gtags_cscope = 0
 "let g:gutentags_define_advanced_commands = 1
 " change focus to quickfix window after search (optional).
 let g:gutentags_plus_switch = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-preview Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+" open new tab for the quickfix windows
+autocmd FileType qf nnoremap <buffer> <Enter> <C-W><Enter><C-W>T
+noremap <m-u> :PreviewScroll -1<cr>
+noremap <m-d> :PreviewScroll +1<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-sneak Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:sneak#label = 1
