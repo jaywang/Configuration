@@ -74,16 +74,16 @@ return
 ;CapsLock & {:: Send, +9                 ; { = ( 
 ;CapsLock & }:: Send, +0;                ; } = )
 ;CapsLock & `:: Send, +``                ; Shift
-;CapsLock & 0:: Send, +0
-;CapsLock & 1:: Send, +1
-;CapsLock & 2:: Send, +2
-;CapsLock & 3:: Send, +3
-;CapsLock & 4:: Send, +4
-;CapsLock & 5:: Send, +5
-;CapsLock & 6:: Send, +6
-;CapsLock & 7:: Send, +7
-;CapsLock & 8:: Send, +8
-;CapsLock & 9:: Send, +9
+CapsLock & 0:: Send, #0
+CapsLock & 1:: Send, #1
+CapsLock & 2:: Send, #2
+CapsLock & 3:: Send, #3
+CapsLock & 4:: Send, #4
+CapsLock & 5:: Send, #5
+CapsLock & 6:: Send, #6
+CapsLock & 7:: Send, #7
+CapsLock & 8:: Send, #8
+CapsLock & 9:: Send, #9
 ;CapsLock & -:: Send, +-
 ;CapsLock & =:: Send, +=
 ;CapsLock & \:: Send, +=
@@ -108,11 +108,9 @@ CapsLock & RIGHT:: Send, {Media_Next};
 CapsLock::Send, {ESC}                   ; Vimer's love  Capslock = {ESC}
 
 ;;=========================Application==============================||
-;CapsLock & d:: Send, !d                    ; Dictionary  D = {Alt + D}
-;CapsLock & f:: Send, !f                    ; Everything  F = {Alt + F}
-;CapsLock & g:: Send, !g                    ; Reversed     G = {Alt + G}
-;CapsLock & e:: Run http://www.google.com/  ; Run Explore   E = {Explore}
-CapsLock & w:: Send, ^#w                    ; DisplyFusion Next Screen  W = {Alt + Win + W}
+CapsLock & w:: Send, ^#w                    ; DisplyFusion Next Screen {Ctrl + Win + W}
+CapsLock & d:: Send, {f12}                  ; Jetbran Go tTo Defined F12
+CapsLock & f1:: Send, ^!{f1}                ; snipaste sceen snip 
 
 ;;==================================================================;;
 ;;=========================CapsLock's Stuff=========================;;
