@@ -19,7 +19,10 @@ Plug 'Shougo/ddc-ui-native'
 Plug 'Shougo/ddc-source-around'
 Plug 'Shougo/ddc-matcher_head'
 Plug 'Shougo/ddc-sorter_rank'
-Plug 'dense-analysis/ale'
+Plug 'Shougo/ddc-source-cmdline'
+
+"Plug 'statiolake/ddc-ale'
+"Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -313,23 +316,31 @@ call ddc#custom#patch_global('ui', 'native')
 
 " Use around source.
 " https://github.com/Shougo/ddc-source-around
-call ddc#custom#patch_global('sources', ['around'])
+"https://github.com/Shougo/ddc-source-cmdline
+call ddc#custom#patch_global('sources', ['around','cmdline'])
+
+call ddc#custom#patch_global('sourceOptions', #{
+      \   around: #{ mark: 'A' },
+      \ })
+call ddc#custom#patch_global('sourceParams', #{
+      \   around: #{ maxSize: 500 },
+      \ })
 
 " Use matcher_head and sorter_rank.
 " https://github.com/Shougo/ddc-matcher_head
 " https://github.com/Shougo/ddc-sorter_rank
-call ddc#custom#patch_global('sourceOptions', {
-      \ '_': {
-      \   'matchers': ['matcher_head'],
-      \   'sorters': ['sorter_rank']},
-      \ })
+call ddc#custom#patch_global('sourceOptions', #{
+      \  _: #{
+      \    matchers: ['matcher_head'],
+      \    sorters: ['sorter_rank'],
+      \  }
+      \})
 
-" Change source options
-call ddc#custom#patch_global('sourceOptions', {
-      \ 'around': {'mark': 'A'},
-      \ })
-call ddc#custom#patch_global('sourceParams', {
-      \ 'around': {'maxSize': 500},
+" Use cmdline source
+call ddc#custom#patch_global('sourceOptions', #{
+      \   cmdline: #{
+      \     mark: 'cmdline',
+      \   }
       \ })
 
 " Customize settings on a filetype
