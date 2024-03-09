@@ -1,0 +1,7 @@
+.git
+.svn
+$Recycle.BIN
+C:\Recovery
+C:\System Volume Information
+D:\System Volume Information
+E:\System Volume Information
