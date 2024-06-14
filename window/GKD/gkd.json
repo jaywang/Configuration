@@ -1,1 +1,329 @@
-{id:11,name:'jay订阅',version:5,author:'jay',updateUrl:'http://172.24.110.74/gkd.json',checkUpdateUrl:'http://172.24.110.74/version.json',globalGroups:[],categories:[],apps:[{id:'com.douban.frodo',name:'豆瓣',groups:[{name:'豆瓣开屏广告跳过',key:0,rules:[{matches:['@[id="com.douban.frodo:id/ic_mail"][visibleToUser=true][left=948]'],matchTime:1000,activityIds:['com.douban.frodo.activity.SplashActivity']}]}]},{id:'com.hupu.games',name:'虎扑',groups:[{key:1,name:'分段广告-推荐流广告',desc:'点击卡片右上角广告文字,出现广告反馈,点击屏蔽该广告',quickFind:true,activityIds:['com.hupu.games.main.MainActivity','com.hupu.android.bbs.detail.PostDetailActivity','com.hupu.topic.TopicActivity'],rules:[{key:0,matches:'@[id="com.hupu.games:id/shield_view"] >2 [id="com.hupu.games:id/tv_tag"][text="广告"]'},{preKeys:0,key:1,matches:'@[clickable=true] > [id="com.hupu.games:id/tv_title"][text="屏蔽该广告"]'}]}]},{id:'com.tencent.qqsports',name:'腾讯体育',groups:[{key:0,name:'开屏广告',quickFind:true,matchTime:10000,actionMaximum:1,resetMatch:'app',rules:[{action:'clickCenter',matches:'TextView[text*="跳过"][text.length<=10]',snapshotUrls:'https://i.gkd.li/i/14032883'}]}]}]}
+{
+  id: 11,
+  name: 'jay订阅',
+  version: 1,
+  author: 'jay',
+  updateUrl: 'http://172.24.110.44/gkd.json',
+  checkUpdateUrl: 'http://172.24.110.44/version.json',
+  globalGroups: [],
+  categories: [
+    {
+      key: -1,
+      name: '权限提示',
+      enable: false,
+    },
+    {
+      key: 0,
+      name: '开屏广告',
+    },
+    {
+      key: 1,
+      name: '青少年模式',
+      enable: false,
+    },
+    {
+      key: 2,
+      name: '更新提示',
+      enable: false,
+    },
+    {
+      key: 3,
+      name: '评价提示',
+      enable: false,
+    },
+    {
+      key: 4,
+      name: '通知提示',
+      enable: false,
+    },
+    {
+      key: 5,
+      name: '定位提示',
+      enable: false,
+    },
+    {
+      key: 6,
+      name: '局部广告',
+      enable: false,
+    },
+    {
+      key: 7,
+      name: '全屏广告',
+      enable: false,
+    },
+    {
+      key: 8,
+      name: '分段广告',
+      enable: false,
+    },
+    {
+      key: 9,
+      name: '功能类',
+      enable: false,
+    },
+  ],
+  apps: [
+    {
+      id: 'com.dianping.v1',
+      name: '大众点评',
+      groups: [
+        {
+          name: '豆瓣开屏广告跳过',
+          key: 0,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: [
+            'com.dianping.main.guide.SplashActivity',
+          ],
+          rules: [
+            {
+              key: 0,
+              matches: '@[id="com.dianping.v1:id/new_skip"][visibleToUser=true]',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.douban.frodo',
+      name: '豆瓣',
+      groups: [
+        {
+          name: '豆瓣开屏广告跳过',
+          key: 0,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          rules: [
+            {
+              quickFind: true,
+              position: {
+                left: 'width * 0.8833',
+                top: 'width * 0.1388',
+              },
+              matches: '[id="com.douban.frodo:id/_ad_image_"]',
+              exampleUrls: 'https://m.gkd.li/57941037/1c36c96b-95b7-4299-8e88-b4fdc85d3518',
+              snapshotUrls: [
+                'https://i.gkd.li/i/13575257',
+                'https://i.gkd.li/i/13575547',
+                'https://i.gkd.li/i/13601755',
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.hupu.games',
+      name: '虎扑',
+      groups: [
+        {
+          key: 0,
+          name: '开屏广告',
+          desc: '点击关闭开屏广告',
+          quickFind: true,
+          activityIds: [
+            'com.hupu.games.main.MainActivity',
+          ],
+          rules: [
+            {
+              key: 0,
+              quickFind: true,
+              matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
+            },
+          ],
+        },
+        {
+          key: 1,
+          name: '分段广告-推荐流广告',
+          desc: '点击卡片右上角广告文字,出现广告反馈,点击屏蔽该广告',
+          quickFind: true,
+          activityIds: [
+            'com.hupu.games.main.MainActivity',
+            'com.hupu.android.bbs.detail.PostDetailActivity',
+            'com.hupu.topic.TopicActivity',
+          ],
+          rules: [
+            {
+              key: 0,
+              matches: '@[id="com.hupu.games:id/shield_view"] >2 [id="com.hupu.games:id/tv_tag"][text="广告"]',
+            },
+            {
+              preKeys: 0,
+              key: 1,
+              matches: '@[clickable=true] > [id="com.hupu.games:id/tv_title"][text="屏蔽该广告"]',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.tencent.qqsports',
+      name: '腾讯体育',
+      groups: [
+        {
+          key: 0,
+          name: '开屏广告',
+          quickFind: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          rules: [
+            {
+              action: 'clickCenter',
+              matches: 'TextView[text*="跳过"][text.length<=10]',
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.qq.qcloud',
+      name: '腾讯微云',
+      groups: [
+        {
+          key: 0,
+          name: '开屏广告',
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          actionMaximumKey: 0,
+          rules: [
+            {
+              key: 0,
+              matches: '[id="com.qq.qcloud:id/gdt_ad_text"] + ImageView',
+              snapshotUrls: 'https://i.gkd.li/i/12755789',
+            },
+            {
+              key: 1,
+              matches: '[text^="互动广告"] + @LinearLayout[clickable=true] > ImageView',
+              snapshotUrls: 'https://i.gkd.li/i/12755799',
+            },
+            {
+              key: 2,
+              matches: '[id="android:id/content"] >2 FrameLayout[childCount=4] > @LinearLayout[clickable=true] > ImageView',
+              snapshotUrls: 'https://i.gkd.li/i/14735621',
+            },
+          ],
+          order: -10,
+        },
+      ],
+    },
+    {
+      id: 'com.zhihu.android',
+      name: '知乎',
+      groups: [
+        {
+          key: 0,
+          name: '开屏广告',
+          desc: '点击关闭开屏广告',
+          quickFind: true,
+          rules: [
+            {
+              matches: [
+                '@[id="com.zhihu.android:id/btn_skip"][visibleToUser=true]',
+              ],
+              matchTime: 1000,
+              activityIds: [
+                'com.zhihu.android.app.ui.activity.LauncherActivity',
+              ],
+              snapshotUrls: [
+                'https://i.gkd.li/snapshot/1718340342332',
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'com.google.android.youtube',
+      name: 'youtube',
+      groups: [
+        {
+          key: 0,
+          name: '全屏广告-视频播放-跳过广告',
+          quickFind: true,
+          activityIds: [
+            'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
+            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
+            'com.google.android.youtube',
+          ],
+          rules: [
+            {
+              key: 0,
+              name: '类型1',
+              matches: '[id="com.google.android.youtube:id/skip_ad_button_text"]',
+              snapshotUrls: [
+                'https://i.gkd.li/i/13797491',
+                'https://i.gkd.li/i/12565261',
+              ],
+            },
+            {
+              key: 1,
+              name: '类型2',
+              matches: '[id="com.google.android.youtube:id/modern_skip_ad_text"]',
+              snapshotUrls: [
+                'https://i.gkd.li/i/13705106',
+              ],
+            },
+          ],
+          enable: false,
+        },
+        {
+          key: 1,
+          name: '全屏广告-视频播放-赞助商广告',
+          quickFind: true,
+          activityIds: [
+            'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
+            'com.google.android.apps.youtube.app.watchwhile.MainActivity',
+          ],
+          rules: [
+            {
+              matches: '@[desc="关闭广告面板" || desc="Close ad panel"] <<n [vid="panel_header"]',
+              snapshotUrls: [
+                'https://i.gkd.li/i/13797491',
+                'https://i.gkd.li/i/13705106',
+                'https://i.gkd.li/i/14784199',
+              ],
+            },
+          ],
+          enable: false,
+        },
+        {
+          key: 2,
+          name: '局部广告-首页会员广告',
+          activityIds: 'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
+          rules: 'ImageView < @Button < ViewGroup +3 Button[desc*="YouTube Premium"]',
+          snapshotUrls: 'https://i.gkd.li/i/12877357',
+          enable: false,
+        },
+        {
+          key: 3,
+          name: '全屏广告-订阅浮窗广告',
+          activityIds: 'com.google.android.apps.youtube.app.watchwhile.MainActivity',
+          rules: 'ViewGroup[desc="免费试用 1 个月"] < * - * > ViewGroup[text="不用了，谢谢"]',
+          snapshotUrls: 'https://i.gkd.li/i/13797512',
+          enable: false,
+        },
+        {
+          key: 4,
+          name: '权限提示-通知权限',
+          quickFind: true,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          rules: [
+            {
+              matches: [
+                '[text="开启通知"]',
+                '[text="不用了"]',
+              ],
+              snapshotUrls: 'https://i.gkd.li/i/14194155',
+            },
+          ],
+          enable: false,
+        },
+      ],
+    },
+  ],
+}
