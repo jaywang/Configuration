@@ -1,456 +1,377 @@
 {
-   "actions": {
-      "base": [ "{44eca225-98f6-489c-b97a-03163e83ce7e}", "{b7e56ba3-2042-4ff7-a499-62d861e2aa69}", "{6ee550e1-8ef3-4025-a673-88d96a48bbc8}", "{81927428-1534-44c4-88aa-f119f682339d}", "{284ecbe8-1ef2-49c9-bd93-f7025519402b}", "{35c0504f-b1a8-4c82-8e32-aa1e68520972}", "{4025f3ed-47e1-4212-9276-de3fbb0786e8}", "{6d2b6aa4-67e5-4dd6-b7ea-c4b30ae8c9a5}", "{edf97959-2c24-47ed-bd7b-3dc5e76b7752}", "{170e8be1-80fa-4afb-a6d7-7bcb1a1eba19}", "{112b153c-23ec-463a-bcae-9eeba93802d8}", "{7971bb91-830f-474b-a976-8bfc9fc001d1}", "{06457068-a652-4c0d-9c3c-a4056dde1f67}", "{e5d9da93-b1dd-4401-8ba1-25f10fca9f93}", "{f56585dd-3f13-4305-8f00-e5599e3f20fe}" ],
-      "items": [ {
-         "command_string": "_action_open_folder",
-         "enabled": true,
-         "guid": "{44eca225-98f6-489c-b97a-03163e83ce7e}",
-         "hotkey": 3330,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_send_to",
-         "enabled": false,
-         "guid": "{b7e56ba3-2042-4ff7-a499-62d861e2aa69}",
-         "hotkey": 21249,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_set_keyword",
-         "enabled": false,
-         "guid": "{6ee550e1-8ef3-4025-a673-88d96a48bbc8}",
-         "hotkey": 0,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_copy",
-         "enabled": false,
-         "guid": "{81927428-1534-44c4-88aa-f119f682339d}",
-         "hotkey": 17154,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_cut",
-         "enabled": false,
-         "guid": "{284ecbe8-1ef2-49c9-bd93-f7025519402b}",
-         "hotkey": 0,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_copy_path",
-         "enabled": true,
-         "guid": "{35c0504f-b1a8-4c82-8e32-aa1e68520972}",
-         "hotkey": 17158,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_copy_folder_path",
-         "enabled": true,
-         "guid": "{4025f3ed-47e1-4212-9276-de3fbb0786e8}",
-         "hotkey": 0,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_open_with",
-         "enabled": true,
-         "guid": "{6d2b6aa4-67e5-4dd6-b7ea-c4b30ae8c9a5}",
-         "hotkey": 20225,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_copy_to_current_folder",
-         "enabled": true,
-         "guid": "{edf97959-2c24-47ed-bd7b-3dc5e76b7752}",
-         "hotkey": 0,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_move_to_current_folder",
-         "enabled": true,
-         "guid": "{170e8be1-80fa-4afb-a6d7-7bcb1a1eba19}",
-         "hotkey": 0,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "command_string": "_action_open",
-         "enabled": false,
-         "guid": "{112b153c-23ec-463a-bcae-9eeba93802d8}",
-         "hotkey": 0,
-         "keyword": "",
-         "type": "builtin"
-      }, {
-         "enabled": false,
-         "guid": "{7971bb91-830f-474b-a976-8bfc9fc001d1}",
-         "hotkey": 0,
-         "keyword": "",
-         "param": "\"{action_path}\"",
-         "path": "C:\\Program Files (x86)\\Notepad++\\notepad++.exe",
-         "run_as_admin": false,
-         "slient": false,
-         "title": "Edit with Notepad++",
-         "type": "custom"
-      }, {
-         "enabled": false,
-         "guid": "{06457068-a652-4c0d-9c3c-a4056dde1f67}",
-         "hotkey": 0,
-         "keyword": "",
-         "param": "\"{action_path}\"",
-         "path": "gvim.exe",
-         "run_as_admin": false,
-         "slient": false,
-         "title": "Edit with Vim",
-         "type": "custom"
-      }, {
-         "enabled": false,
-         "guid": "{e5d9da93-b1dd-4401-8ba1-25f10fca9f93}",
-         "hotkey": 0,
-         "keyword": "",
-         "param": "\"{action_path}\"",
-         "path": "atom.cmd",
-         "run_as_admin": false,
-         "slient": false,
-         "title": "Edit with Atom",
-         "type": "custom"
-      }, {
-         "enabled": false,
-         "guid": "{f56585dd-3f13-4305-8f00-e5599e3f20fe}",
-         "hotkey": 0,
-         "keyword": "",
-         "param": "/K \"cd /d \"{action_path}\" & \"C:\\Program Files (x86)\\Git\\bin\\sh.exe\" --login\"",
-         "path": "cmd.exe",
-         "run_as_admin": false,
-         "slient": false,
-         "title": "Git Bash",
-         "type": "custom"
-      } ]
-   },
-   "app_settings": {
-      "by_path": [  ],
-      "by_type": {
-
-      }
-   },
-   "appearance": {
-      "theme": {
-         "file": "Solarized Dark.listarytheme.json"
-      }
-   },
-   "check_update": {
-      "last_check_local_version": "5.00.2843",
-      "last_check_time": "13291547244048851"
-   },
-   "general": {
-      "default_file_manager": {
-
-      }
-   },
-   "history": {
-
-   },
-   "hotkey": {
-      "launch_apps": 8193,
-      "main": 0
-   },
-   "keywords": {
-      "builtin_commands": [  ],
-      "custom_commands": [  ],
-      "folder": [  ],
-      "web_search": [ {
-         "enabled": false,
-         "guid": "{dd896809-2af4-405b-834f-45816615e3e3}"
-      }, {
-         "enabled": false,
-         "guid": "{5ac62036-62aa-49d3-866b-d041bc7b1b76}"
-      }, {
-         "enabled": false,
-         "guid": "{4ed886fb-1df0-4fd0-abc1-810fc180e647}"
-      }, {
-         "enabled": false,
-         "guid": "{5014b42a-884d-40d3-835d-69079dd9fc51}"
-      }, {
-         "enabled": false,
-         "guid": "{95147e79-6274-4127-98bb-09d9ffa2a39a}"
-      }, {
-         "enabled": false,
-         "guid": "{610a486d-0028-4739-8eb6-50f5247c918f}"
-      }, {
-         "enabled": false,
-         "guid": "{c78295a6-2cf8-4569-bf42-33f1e5c030d7}"
-      }, {
-         "enabled": false,
-         "guid": "{2db0261a-1114-4c8d-8cc8-62a89aeb1a35}"
-      }, {
-         "enabled": false,
-         "guid": "{455e1dc4-5e38-4b00-85da-d0bf46c68f4f}"
-      }, {
-         "enabled": false,
-         "guid": "{1744aa0c-751a-495f-aac5-6910e7406229}"
-      }, {
-         "enabled": true,
-         "icon": {
-
-         },
-         "keyword": "gh",
-         "title": "Github",
-         "url": "https://github.com/search?q={query}"
-      }, {
-         "enabled": true,
-         "icon": {
-
-         },
-         "keyword": "zh",
-         "title": "Zhihu",
-         "url": "https://www.zhihu.com/search?type=content&q={query}"
-      } ]
-   },
-   "launch_apps": {
-      "search_folders": {
-
-      }
-   },
-   "menu_lists": {
-      "items": [ {
-         "id": 10,
-         "root_item": {
-            "items": [ {
-               "anchor": "submenu_favorite",
-               "items": [ {
-                  "anchor": "menu_list_tc_fav_menu",
-                  "id": 400,
-                  "type": "menu_list"
-               }, {
-                  "anchor": "menu_list_favorite_global",
-                  "id": 100,
-                  "type": "menu_list"
-               }, {
-                  "anchor": "menu_list_favorite_application",
-                  "id": 101,
-                  "type": "menu_list"
-               } ],
-               "type": "submenu"
-            }, {
-               "anchor": "submenu_recent",
-               "items": [ {
-                  "anchor": "menu_list_recent",
-                  "id": 200,
-                  "type": "menu_list"
-               } ],
-               "type": "submenu"
-            }, {
-               "anchor": "submenu_smart_commands",
-               "items": [ {
-                  "anchor": "menu_list_smart_commands",
-                  "id": 300,
-                  "type": "menu_list"
-               } ],
-               "type": "submenu"
-            } ],
-            "type": "submenu"
-         }
-      }, {
-         "id": 11,
-         "root_item": {
-            "items": [ {
-               "anchor": "menu_list_tc_fav_menu",
-               "id": 400,
-               "type": "menu_list"
-            }, {
-               "anchor": "menu_list_favorite_global",
-               "id": 100,
-               "type": "menu_list"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "submenu_recent",
-               "items": [ {
-                  "anchor": "menu_list_recent",
-                  "id": 200,
-                  "type": "menu_list"
-               } ],
-               "type": "submenu"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "command_OpenedFolders",
-               "command": "_OpenedFolders",
-               "type": "command"
-            }, {
-               "anchor": "submenu_smart_commands",
-               "items": [ {
-                  "anchor": "menu_list_smart_commands",
-                  "id": 300,
-                  "type": "menu_list"
-               } ],
-               "type": "submenu"
-            }, {
-               "anchor": "command_Options",
-               "command": "_Options",
-               "type": "command"
-            } ],
-            "type": "submenu"
-         }
-      }, {
-         "id": 100,
-         "root_item": {
-            "items": [  ],
-            "type": "submenu"
-         }
-      }, {
-         "id": 300,
-         "root_item": {
-            "items": [ {
-               "anchor": "command_QuickSwitch",
-               "command": "_QuickSwitch",
-               "type": "command"
-            }, {
-               "anchor": "command_OpenSelectedFile",
-               "command": "_OpenSelectedFile",
-               "type": "command"
-            }, {
-               "anchor": "command_OpenedFolders",
-               "command": "_OpenedFolders",
-               "type": "command"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "command_Explore",
-               "command": "_Explore",
-               "type": "command"
-            }, {
-               "anchor": "command_Cmd",
-               "command": "_Cmd",
-               "type": "command"
-            }, {
-               "anchor": "command_CopyFolderPath",
-               "command": "_CopyFolderPath",
-               "type": "command"
-            }, {
-               "anchor": "command_CopyFilePaths",
-               "command": "_CopyFilePaths",
-               "type": "command"
-            }, {
-               "anchor": "command_GoToAppFolder",
-               "command": "_GoToAppFolder",
-               "type": "command"
-            }, {
-               "anchor": "command_ExploreAppFolder",
-               "command": "_ExploreAppFolder",
-               "type": "command"
-            }, {
-               "anchor": "command_ExportToExcel",
-               "command": "_ExportToExcel",
-               "type": "command"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "command_ToggleFileExt",
-               "command": "_ToggleFileExt",
-               "type": "command"
-            }, {
-               "anchor": "command_ToggleHidden",
-               "command": "_ToggleHidden",
-               "type": "command"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "command_DisableListary",
-               "command": "_DisableListary",
-               "type": "command"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "command_Options",
-               "command": "_Options",
-               "type": "command"
-            } ],
-            "type": "submenu"
-         }
-      }, {
-         "id": 500,
-         "root_item": {
-            "items": [ {
-               "anchor": "menu_list_favorite_global",
-               "id": 100,
-               "type": "menu_list"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "submenu_recent",
-               "items": [ {
-                  "anchor": "menu_list_recent",
-                  "id": 200,
-                  "type": "menu_list"
-               } ],
-               "type": "submenu"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "command_Options",
-               "command": "_Options",
-               "type": "command"
-            } ],
-            "type": "submenu"
-         }
-      }, {
-         "id": 501,
-         "root_item": {
-            "items": [ {
-               "anchor": "command_Options",
-               "command": "_Options",
-               "type": "command"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "command_Tutorial",
-               "command": "_Tutorial",
-               "type": "command"
-            }, {
-               "anchor": "command_OnlineHelp",
-               "command": "_OnlineHelp",
-               "type": "command"
-            }, {
-               "anchor": "command_CheckUpdates",
-               "command": "_CheckUpdates",
-               "type": "command"
-            }, {
-               "anchor": "command_About",
-               "command": "_About",
-               "type": "command"
-            }, {
-               "anchor": "separator",
-               "type": "separator"
-            }, {
-               "anchor": "command_Exit",
-               "command": "_Exit",
-               "type": "command"
-            } ],
-            "type": "submenu"
-         }
-      } ],
-      "version": 0
-   },
-   "pro_license": {
-      "email": "kejiewong@live.com",
-      "name": "jay",
-      "regcode": "DCH7KWTKM4AWD7VQSKEKS4GVSJER32XWZC6JJTWCKKGBSSAGPTTL2VNVWC9GBLN27G3SWNV2GXFJAC9XA4DYEF5ZYBYFZDRP53CHX65BSNTUUJJE6BT7JPF57Y8J7BJ3WXUSFG2GKPYHAAS6ZNM7P7AKMKR9FHAN35M5B3JDN5UCU5C9DBS5JDFCEABPGVL9"
-   },
-   "status": {
-      "disk_search_started_successfully_last_time": true
-   },
-   "tip": {
-      "tutorial_listary5": false
-   },
-   "version": 2,
-   "window_types": {
-
-   }
+  "AppConfigs": {
+    "TypeConfigs": {
+      "DirectoryOpus": {},
+      "WindowsExplorer": {},
+      "FileDialog": {},
+      "FolderDialog": {},
+      "Desktop": {
+        "EnableMouseDoubleClick": false
+      },
+      "TotalCommander": {
+        "EnableMouseMiddleClick": false
+      },
+      "FreeCommander": {},
+      "XYplorer": {},
+      "xplorer2": {},
+      "Bandizip": {},
+      "AutoCAD": {},
+      "Explzh": {},
+      "WinRAR.ExtractDialog": {},
+      "WPS.FileDialog": {}
+    },
+    "PathConfigs": {}
+  },
+  "Menus": {
+    "Favorites": {
+      "Deletions": [],
+      "Moves": [],
+      "Insertions": [],
+      "Updates": []
+    }
+  },
+  "DiskSearch": {
+    "FolderPriority": {
+      "Deletions": [],
+      "Moves": [],
+      "Insertions": [],
+      "Updates": []
+    },
+    "FileNamePriority": {
+      "Deletions": [],
+      "Moves": [],
+      "Insertions": [],
+      "Updates": []
+    },
+    "SearchFilter": {
+      "Deletions": [],
+      "Moves": [],
+      "Insertions": [
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Name": "b2_prj",
+            "Keyword": "b2",
+            "SearchForFolders": true,
+            "SearchInFolders": "E:\\B2\\PC\\UnityExperiment"
+          }
+        }
+      ],
+      "Updates": []
+    }
+  },
+  "FileSearchWindow": {
+    "Columns": {
+      "Deletions": [],
+      "Moves": [],
+      "Insertions": [],
+      "Updates": [
+        {
+          "Id": "FileName",
+          "UpdatedProperties": {
+            "Width": 200
+          }
+        },
+        {
+          "Id": "Path",
+          "UpdatedProperties": {
+            "Width": 624
+          }
+        },
+        {
+          "Id": "DateModified",
+          "UpdatedProperties": {
+            "Width": 200
+          }
+        }
+      ]
+    },
+    "WindowWidth": 1357,
+    "WindowHeight": 720,
+    "PreviewWidth": 300,
+    "SideBarWidth": 225
+  },
+  "Commands": {
+    "Items": {
+      "Deletions": [
+        "abda7ddb-aa20-4c97-ab31-3566a06fa22f",
+        "e95b87aa-9cf6-48aa-82c7-603e9af0f80b",
+        "56ba2121-3822-4cf8-a16d-33b0797ab409",
+        "71135870-ef2b-4eb6-a6d7-baddbf1f3802",
+        "c0a55d83-503c-42ec-863e-caca89933159",
+        "ac0dd5f5-3eb4-4705-966b-f90ba9cd6906",
+        "a45c5a46-406a-42b6-8176-068a85081630",
+        "f1075887-f8b7-4597-86f8-6e19ee611d1d"
+      ],
+      "Moves": [],
+      "Insertions": [
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "172.24.110.38",
+            "Path": "%windir%\\system32\\mstsc.exe",
+            "Parameter": "/v:172.24.110.38 /f",
+            "Id": "1dfad3d8-59a4-4ebb-ab7f-f2cdf7ca7af8",
+            "Keyword": "r38",
+            "$customType": "CustomCommand"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "172.24.110.39",
+            "Path": "%windir%\\system32\\mstsc.exe",
+            "Parameter": "/v:172.24.110.39 /f",
+            "Id": "99895c87-2848-4a16-9000-db85a5b1186e",
+            "Keyword": "r39",
+            "$customType": "CustomCommand"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "172.24.110.40",
+            "Path": "%windir%\\system32\\mstsc.exe",
+            "Parameter": "/v:172.24.110.40 /f",
+            "Id": "013aaa1a-0f0e-4b19-b494-3932583f9934",
+            "Keyword": "r40",
+            "$customType": "CustomCommand"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "172.24.110.41",
+            "Path": "%windir%\\system32\\mstsc.exe",
+            "Parameter": "/v:172.24.110.41 /f",
+            "Id": "5dbba6fa-07b4-4b79-94db-e79a73e3896c",
+            "Keyword": "r41",
+            "$customType": "CustomCommand"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "172.24.110.42",
+            "Path": "%windir%\\system32\\mstsc.exe",
+            "Parameter": "/v:172.24.110.42 /f",
+            "Id": "9c4146e0-5bb0-44ac-83f4-1ea0e5e78367",
+            "Keyword": "r42",
+            "$customType": "CustomCommand"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "Search word by Eudic",
+            "Path": "C:\\Program Files (x86)\\eudic\\eudic.exe",
+            "Parameter": "-w {query}",
+            "Id": "896ed317-ae94-4aac-8bbe-47d1a870c3fe",
+            "Keyword": "fy",
+            "$customType": "CustomCommand"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "vnc mac m1",
+            "Path": "c:\\Program Files\\RealVNC\\VNC Viewer\\vncviewer.exe",
+            "Parameter": "\"d:\\AppData\\RealVNC\\172.24.110.64.vnc\"",
+            "Id": "f13b8a72-918d-4048-9b5c-a7ce67c1027b",
+            "Keyword": "vm1",
+            "$customType": "CustomCommand"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "vnc mac m2",
+            "Path": "c:\\Program Files\\RealVNC\\VNC Viewer\\vncviewer.exe",
+            "Parameter": "\"d:\\AppData\\RealVNC\\172.24.110.17.vnc\"",
+            "Id": "01952433-a5b2-49b9-91c3-488cd915d849",
+            "Keyword": "vm2",
+            "$customType": "CustomCommand"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "172.24.110.28",
+            "Path": "%windir%\\system32\\mstsc.exe",
+            "Parameter": "/v:172.24.110.28 /f",
+            "Id": "d9dec77a-249f-4b21-985f-7d422317fa02",
+            "Keyword": "r28",
+            "$customType": "CustomCommand"
+          }
+        }
+      ],
+      "Updates": [
+        {
+          "Id": "e3115360-9c5a-4e93-88d3-b3d68fd27510",
+          "UpdatedProperties": {
+            "Enabled": false
+          }
+        }
+      ]
+    }
+  },
+  "WebSearch": {
+    "Items": {
+      "Deletions": [],
+      "Moves": [],
+      "Insertions": [
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Keyword": "gh",
+            "Url": "https://github.com/search?q={query}",
+            "Title": "Github",
+            "SuggestionUrl": ""
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Keyword": "zh",
+            "Url": "https://www.zhihu.com/search?type=content&q={query}",
+            "Title": "Zhihu",
+            "Icon": {
+              "Path": "{user}\\b82b25b3-436e-4ab5-9d56-e3e5ba3d2730.png",
+              "TypeName": "Path"
+            },
+            "SuggestionUrl": ""
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Keyword": "db",
+            "Url": "https://www.douban.com/search?q={query}",
+            "Title": "Douban",
+            "SuggestionUrl": ""
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Keyword": "ab",
+            "Url": "https://www.abbreviations.com/{query}",
+            "Title": "abbreviations"
+          }
+        },
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Keyword": "ip",
+            "Url": "https://ip.tool.chinaz.com/{query}",
+            "Title": "chinaz"
+          }
+        }
+      ],
+      "Updates": [
+        {
+          "Id": "5ac62036-62aa-49d3-866b-d041bc7b1b76",
+          "UpdatedProperties": {
+            "Enabled": false
+          }
+        },
+        {
+          "Id": "4ed886fb-1df0-4fd0-abc1-810fc180e647",
+          "UpdatedProperties": {
+            "Enabled": false
+          }
+        },
+        {
+          "Id": "95147e79-6274-4127-98bb-09d9ffa2a39a",
+          "UpdatedProperties": {
+            "Enabled": false
+          }
+        },
+        {
+          "Id": "610a486d-0028-4739-8eb6-50f5247c918f",
+          "UpdatedProperties": {
+            "Enabled": false
+          }
+        },
+        {
+          "Id": "2db0261a-1114-4c8d-8cc8-62a89aeb1a35",
+          "UpdatedProperties": {
+            "Enabled": false
+          }
+        },
+        {
+          "Id": "455e1dc4-5e38-4b00-85da-d0bf46c68f4f",
+          "UpdatedProperties": {
+            "Enabled": false
+          }
+        },
+        {
+          "Id": "1744aa0c-751a-495f-aac5-6910e7406229",
+          "UpdatedProperties": {
+            "Enabled": false
+          }
+        }
+      ]
+    }
+  },
+  "Actions": {
+    "Items": {
+      "Deletions": [
+        "afc47971-acaa-4731-bd26-0cd85109bee0"
+      ],
+      "Moves": [],
+      "Insertions": [
+        {
+          "Index": -1,
+          "Info": null,
+          "Item": {
+            "Title": "Vim",
+            "Path": "C:\\Program Files\\Vim\\vim90\\gvim.exe",
+            "Parameter": "--remote-tab-silent  {action_path}",
+            "Hotkey": 585,
+            "$customType": "CustomCommand"
+          }
+        }
+      ],
+      "Updates": []
+    }
+  },
+  "AutoUpdate": {
+    "EnableAutoUpdate": false,
+    "BetaUpdates": true
+  },
+  "Settings": {
+    "General.EnableAnalytics": false,
+    "Hotkey.ShowListary": 288,
+    "Hotkey.NextItem": 586,
+    "Hotkey.PreviousItem": 587,
+    "Hotkey.OpenPreview": 592,
+    "Tutorial.ShowMainV3": false,
+    "Appearance.Theme": 2,
+    "Listary5.SettingsImported": true,
+    "Listary5.ProLicense.Name": "jay",
+    "Listary5.ProLicense.Email": "kejiewong@live.com",
+    "Listary5.ProLicense.Key": "DCH7KWTKM4AWD7VQSKEKS4GVSJER32XWZC6JJTWCKKGBSSAGPTTL2VNVWC9GBLN27G3SWNV2GXFJAC9XA4DYEF5ZYBYFZDRP53CHX65BSNTUUJJE6BT7JPF57Y8J7BJ3WXUSFG2GKPYHAAS6ZNM7P7AKMKR9FHAN35M5B3JDN5UCU5C9DBS5JDFCEABPGVL9"
+  },
+  "Extensions": {
+    "Extensions": {
+      "1a63ea9d-bf25-431f-96e3-17b80027efab": {},
+      "f86966a8-24a9-46a0-baea-11e861a5c2c3": {}
+    }
+  }
 }

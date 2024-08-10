@@ -33,7 +33,7 @@ dns:
 proxies:
   - name: vultr
     type: trojan
-    server: vu-api-0705.top
+    server: vu-api-0810.top
     port: 443
     password: xdN3#kCiPM
     alpn:
