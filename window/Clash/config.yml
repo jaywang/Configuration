@@ -149,5 +149,4 @@ rules:
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
 
-  - GEOIP,CN,DIRECT
   - MATCH,DIRECT
