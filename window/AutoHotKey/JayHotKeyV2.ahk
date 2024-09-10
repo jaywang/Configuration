@@ -30,6 +30,7 @@ CapsLock & y:: Send "^y"                 ; Y = Redo
 CapsLock & n:: Send "^{Tab}"             ; Switch Tag    N = {Ctr + Tab}
 CapsLock & m:: Send "+^{Tab}"            ; Switch Tag    M = {Shift + Ctr + Tab}
 CapsLock & q:: Send "!{F4}"              ; Close Window  Q = {Alt + F4}
+CapsLock & w:: Send "!^{Tab}"            ; Switch Tag    W = {alt + Ctr + Tab}
 
 CapsLock & UP:: Send "{Volume_Up}"
 CapsLock & DOWN:: Send "{Volume_Down}" 
@@ -37,6 +38,8 @@ CapsLock & LEFT:: Send "{Media_Play_Pause}"
 CapsLock & RIGHT:: Send "{Media_Next}"
 
 ;;=========================Application==============================
-CapsLock & w:: Send "^#w"                    ; DisplyFusion Next Screen {Ctrl + Win + W}
+CapsLock & s:: Send "^#w"                    ; DisplyFusion Next Screen {Ctrl + Win + W}
 CapsLock & d:: Send "{F12}"                  ; Jetbran Go tTo Defined F12
-CapsLock & f1:: Send "^!{F1}"                ; snipaste sceen snip 
+CapsLock & f1:: Send "^+{F1}"                ; snipaste sceen snip 
+CapsLock & e:: Send "^!e"                    ; cmder 
+CapsLock & f:: Send "+^{Esc}"                ; windos task  {Shift + Ctr + Tab}
