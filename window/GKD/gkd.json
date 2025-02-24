@@ -3,8 +3,8 @@
   name: 'jay订阅',
   version: 1,
   author: 'jay',
-  updateUrl: 'http://172.24.110.44/gkd.json',
-  checkUpdateUrl: 'http://172.24.110.44/version.json',
+  updateUrl: 'http://172.24.110.37/gkd.json',
+  checkUpdateUrl: 'http://172.24.110.37/version.json',
   globalGroups: [],
   categories: [
     {
@@ -97,7 +97,7 @@
           resetMatch: 'app',
           rules: [
             {
-              quickFind: true,
+              fastQuery: true,
               position: {
                 left: 'width * 0.8833',
                 top: 'width * 0.1388',
@@ -122,7 +122,7 @@
           key: 0,
           name: '开屏广告',
           desc: '点击关闭开屏广告',
-          quickFind: true,
+          fastQuery: true,
           matchTime: 10000,
           actionMaximum: 2,
           resetMatch: 'app',
@@ -132,7 +132,7 @@
           rules: [
             {
               key: 0,
-              quickFind: true,
+              fastQuery: true,
               matches: 'TextView[text*="跳过"][text.length<10][visibleToUser=true]',
             },
           ],
@@ -141,7 +141,7 @@
           key: 1,
           name: '分段广告-推荐流广告',
           desc: '点击卡片右上角广告文字,出现广告反馈,点击屏蔽该广告',
-          quickFind: true,
+          fastQuery: true,
           activityIds: [
             'com.hupu.games.main.MainActivity',
             'com.hupu.android.bbs.detail.PostDetailActivity',
@@ -168,7 +168,7 @@
         {
           key: 0,
           name: '开屏广告',
-          quickFind: true,
+          fastQuery: true,
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: 'app',
@@ -221,7 +221,7 @@
           key: 0,
           name: '开屏广告',
           desc: '点击关闭开屏广告',
-          quickFind: true,
+          fastQuery: true,
           matchTime: 10000,
           actionMaximum: 2,
           resetMatch: 'app',
@@ -244,7 +244,7 @@
           key: 12,
           name: '全屏广告-弹窗广告',
           desc: '点击关闭',
-          quickFind: true,
+          fastQuery: true,
           rules: [
             {
               key: 0,
@@ -286,7 +286,7 @@
         {
           key: 0,
           name: '全屏广告-视频播放-跳过广告',
-          quickFind: true,
+          fastQuery: true,
           activityIds: [
             'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
             'com.google.android.apps.youtube.app.watchwhile.MainActivity',
@@ -316,7 +316,7 @@
         {
           key: 1,
           name: '全屏广告-视频播放-赞助商广告',
-          quickFind: true,
+          fastQuery: true,
           activityIds: [
             'com.google.android.apps.youtube.app.watchwhile.WatchWhileActivity',
             'com.google.android.apps.youtube.app.watchwhile.MainActivity',
@@ -352,7 +352,7 @@
         {
           key: 4,
           name: '权限提示-通知权限',
-          quickFind: true,
+          fastQuery: true,
           actionMaximum: 1,
           resetMatch: 'app',
           rules: [
@@ -376,7 +376,7 @@
           key: 0,
           name: '开屏广告',
           desc: '点击关闭开屏广告',
-          quickFind: true,
+          fastQuery: true,
           matchTime: 10000,
           actionMaximum: 2,
           resetMatch: 'app',
@@ -386,7 +386,7 @@
           rules: [
             {
               key: 0,
-              quickFind: true,
+              fastQuery: true,
               matches: 'TextView[text*="跳过"][text.length<10][visibleToUser=true]',
             },
           ],
@@ -420,7 +420,7 @@
           name: '功能类-关闭[开通免密支付]弹窗',
           rules: [
             {
-              quickFind: true,
+              fastQuery: true,
               activityIds: 'com.mcd.order.activity.OrderDetailActivity',
               matches: '@[vid="iv_close"] - * >2 [text*="免密支付"]',
               exampleUrls: 'https://m.gkd.li/57941037/4b26dc9e-06d9-43a2-a105-6fb711c9aedb',
@@ -438,7 +438,7 @@
         {
           key: 0,
           name: '开屏广告',
-          quickFind: true,
+          fastQuery: true,
           matchTime: 10000,
           actionMaximum: 1,
           resetMatch: 'app',
