@@ -38,8 +38,9 @@ CapsLock & LEFT:: Send "{Media_Play_Pause}"
 CapsLock & RIGHT:: Send "{Media_Next}"
 
 ;;=========================Application==============================
-CapsLock & s:: Send "^#w"                    ; DisplyFusion Next Screen {Ctrl + Win + W}
+CapsLock & s:: Send "^#a"                    ; DisplyFusion Next Screen {Ctrl + Win + W}
 CapsLock & d:: Send "{F12}"                  ; Jetbran Go tTo Defined F12
 CapsLock & f1:: Send "^+{F1}"                ; snipaste sceen snip 
 CapsLock & e:: Send "^!e"                    ; cmder 
 CapsLock & f:: Send "+^{Esc}"                ; windos task  {Shift + Ctr + Tab}
+CapsLock & t:: Send "+#t"                    ; powertoys ocr

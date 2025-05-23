@@ -1,8 +1,6 @@
 #SingleInstance Force
-Persistent
 ListLines 0
 KeyHistory 0
-DetectHiddenWindows 1
 
 #Include .\JayHotKeyV2.ahk
 #Include .\utils\ini.ahk
@@ -18,18 +16,12 @@ lastWindow := ""
 lastState := state
 mode := 2
 
-/**
- * 将输入法状态切换为中文
- */
 switch_CN(*) {
     if (!isCN(mode)) {
         IME.SetInputMode(1)
     }
 }
 
-/**
- * 将输入法状态切换为英文
- */
 switch_EN(*) {
     if (isCN(mode)) {
         IME.SetInputMode(0)
