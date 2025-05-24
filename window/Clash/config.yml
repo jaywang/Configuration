@@ -172,5 +172,6 @@ rules:
 
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,apple-relay.apple.com,PROXY
 
   - MATCH,DIRECT
