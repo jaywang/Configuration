@@ -54,7 +54,7 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
-    path: ./ruleset/reject.yaml
+    path: ./ruleset/reject2.yaml
     interval: 86400
 
   proxy:
